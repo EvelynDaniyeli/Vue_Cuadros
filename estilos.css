@@ -1,0 +1,50 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body
+{
+    background-color: #D1EED3; 
+}
+.contenedor
+{
+    display: flex;  
+    height: 100vh;
+    justify-content: center;
+}
+.hola
+{
+    display: flex;  
+    height: 450px;
+    width: 450px;
+    align-self: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+}
+.cuadro
+{
+    background: linear-gradient(to bottom right, #ffaf7b,#d76d77,#3a1c71);
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+}
+.cuadrote{
+    display: flex;
+    margin-left: 5vw;
+    height: 100vh;
+    width: 30vw;
+    background-color: crimson;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.bot{
+    width: 8em;
+    height: 3em;
+    background-color: darkgrey;
+    text-align: center;
+    align-self: center;
+}
