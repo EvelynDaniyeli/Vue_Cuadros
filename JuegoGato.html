@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" media="all" href="estilos.css" />
+    <title>Juego Gato</title>
+</head>
+<body>
+    <div class="contenedor" id="app">
+        <div class="hola">
+                <div class="cuadro" @click="Juego(1)"
+                :class="{'circulo': c1 == 1, 'equis': c1 == 2 }">
+                </div>
+                <div class="cuadro" @click="Juego(2)"
+                :class="{'circulo': c2 == 1, 'equis': c2 == 2 }">
+                </div>
+                <div class="cuadro" @click="Juego(3)"
+                :class="{'circulo': c3 == 1, 'equis': c3 == 2 }">
+                </div>
+                <div class="cuadro" @click="Juego(4)"
+                :class="{'circulo': c4 == 1, 'equis': c4 == 2 }">
+                </div>
+                <div class="cuadro" @click="Juego(5)"
+                :class="{'circulo': c5 == 1, 'equis': c5 == 2 }">
+                </div>
+                <div class="cuadro" @click="Juego(6)"
+                :class="{'circulo': c6 == 1, 'equis': c6 == 2 }">
+                </div>
+                <div class="cuadro" @click="Juego(7)"
+                :class="{'circulo': c7 == 1, 'equis': c7 == 2 }">
+                </div>
+                <div class="cuadro" @click="Juego(8)"
+                :class="{'circulo': c8 == 1, 'equis': c8 == 2 }">
+                </div>
+                <div class="cuadro" @click="Juego(9)"
+                :class="{'circulo': c9 == 1, 'equis': c9 == 2 }">
+                </div>
+                
+        </div>
+        <div class="cuadrote">
+            <div class="cuadro2">
+                <div class="bot" @click="Reiniciar">Reiniciar</div>
+            </div>
+            <div class="cuadro3">
+                <div :class="{'ganador1': gana == 1, 'ganador2': gana == 2 }" style="text-align: center;">{{Ganador}}</div>
+            </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script>
+        var vm = new Vue ({
+            el: "#app",
+            data:{
+                gana:0,
+                turno:0,
+                pos:0,
+                tur:0,
+                c1:0,
+                c2:0,
+                c3:0,
+                c4:0,
+                c5:0,
+                c6:0,
+                c7:0,
+                c8:0,
+                c9:0,
+                Ganador:""
+            },
+            methods:{
+                Juego:function(event){
+                    this.pos=event;
+                    this.tur=1;
+
+                    if(this.pos==1 && this.c1==0){
+                        if(this.turno==0){
+                            this.c1=this.turno+1;
+                        }
+                        else{
+                            this.c1=this.turno+1;
+                        }
+                    }
+                    if(this.pos==2 && this.c2==0){
+                        if(this.turno==0){
+                            this.c2=this.turno+1;
+                        }
+                        else{
+                            this.c2=this.turno+1;
+                        }
+                    }
+                    if(this.pos==3 && this.c3==0){
+                        if(this.turno==0){
+                            this.c3=this.turno+1;
+                        }
+                        else{
+                            this.c3=this.turno+1;
+                        }
+                    }
+
+                    if(this.pos==4 && this.c4==0){
+                        if(this.turno==0){
+                            this.c4=this.turno+1;
+                        }
+                        else{
+                            this.c4=this.turno+1;
+                        }
+                    }
+                    if(this.pos==5 && this.c5==0){
+                        if(this.turno==0){
+                            this.c5=this.turno+1;
+                        }
+                        else{
+                            this.c5=this.turno+1;
+                        }
+                    }
+                    if(this.pos==6 && this.c6==0){
+                        if(this.turno==0){
+                            this.c6=this.turno+1;
+                        }
+                        else{
+                            this.c6=this.turno+1;
+                        }
+                    }
+                    if(this.pos==7 && this.c7==0){
+                        if(this.turno==0){
+                            this.c7=this.turno+1;
+                        }
+                        else{
+                            this.c7=this.turno+1;
+                        }
+                    }
+                    if(this.pos==8 && this.c8==0){
+                        if(this.turno==0){
+                            this.c8=this.turno+1;
+                        }
+                        else{
+                            this.c8=this.turno+1;
+                        }
+                    }
+                    if(this.pos==9 && this.c9==0){
+                        if(this.turno==0){
+                            this.c9=this.turno+1;
+                        }
+                        else{
+                            this.c9=this.turno+1;
+                        }
+                    }
+                    //Turno
+                    if (this.turno && this.tur){
+                        this.turno = 0;
+                    } else{
+                        this.turno = 1;
+                    }
+
+                    //Jugador 1
+                    if (this.c1==1 && this.c2==1 && this.c3==1) { this.gana = 1; } // xxx *** ***
+                    if (this.c4==1 && this.c5==1 && this.c6==1) { this.gana = 1; } // *** xxx ***
+                    if (this.c7==1 && this.c8==1 && this.c9==1) { this.gana = 1; } // *** *** xxx
+                    if (this.c1==1 && this.c4==1 && this.c7==1) { this.gana = 1; } // x** x** x**
+                    if (this.c2==1 && this.c5==1 && this.c8==1) { this.gana = 1; } // *x* *x* *x*
+                    if (this.c3==1 && this.c6==1 && this.c9==1) { this.gana = 1; } // **x **x **x
+                    if (this.c1==1 && this.c5==1 && this.c9==1) { this.gana = 1; } // x** *x* **x
+                    if (this.c3==1 && this.c5==1 && this.c7==1) { this.gana = 1; } // **x *x* x**
+                    //Jugador 2
+                    if (this.c1==2 && this.c2==2 && this.c3==2) { this.gana = 2; } // xxx *** ***
+                    if (this.c4==2 && this.c5==2 && this.c6==2) { this.gana = 2; } // *** xxx ***
+                    if (this.c7==2 && this.c8==2 && this.c9==2) { this.gana = 2; } // *** *** xxx
+                    if (this.c1==2 && this.c4==2 && this.c7==2) { this.gana = 2; } // x** x** x**
+                    if (this.c2==2 && this.c5==2 && this.c8==2) { this.gana = 2; } // *x* *x* *x*
+                    if (this.c3==2 && this.c6==2 && this.c9==2) { this.gana = 2; } // **x **x **x
+                    if (this.c1==2 && this.c5==2 && this.c9==2) { this.gana = 2; } // x** *x* **x
+                    if (this.c3==2 && this.c5==2 && this.c7==2) { this.gana = 2; } // **x *x* x**
+
+                    if(this.c1 && this.c2 && this.c3 && this.c4 && this.c5 && this.c6 && this.c7 && this.c8 && this.c9 && !this.gana){
+                        alert("Empate")
+                    }
+
+                    if(this.gana==1){this.Ganador = "EL JUGADOR 1 HA GANADO"; }
+                    if(this.gana==2){this.Ganador = "EL JUGADOR 2 HA GANADO"; }
+                },
+                Reiniciar:function(){
+                    this.gana=0;
+                    this.turno=0;
+                    this.pos=0;
+                    this.tur=0;
+                    this.c1=0;
+                    this.c2=0;
+                    this.c3=0;
+                    this.c4=0;
+                    this.c5=0;
+                    this.c6=0;
+                    this.c7=0;
+                    this.c8=0;
+                    this.c9=0;
+                    this.Ganador="";
+                }
+
+            }
+
+        })
+    </script>
+    
+</body>
+</html>

@@ -36,15 +36,91 @@ body
     margin-left: 5vw;
     height: 100vh;
     width: 30vw;
-    background-color: crimson;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
 
 }
 .bot{
+    padding-top: 1em;
+    font-weight: bolder;
+    color: whitesmoke;
     width: 8em;
     height: 3em;
-    background-color: darkgrey;
+    background-color:#572364;
     text-align: center;
     align-self: center;
+}
+.circulo{
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 15%, rgba(0,194,255,1) 27%, rgba(9,9,121,1) 36%);
+}
+
+.equis{
+    align-self: center;
+    height: 150px;
+    width: 150px;
+    position: relative;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+}
+
+.equis:after{
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\274c"; /* use the hex value here... */
+    font-size: 50px; 
+    color:red;
+    line-height: 100px;
+    text-align: center;
+}
+
+.cuadro2{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    justify-content: flex-end;
+    height: 50vh;
+    width: 30vw;
+}
+
+.cuadro3{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    justify-content: center;
+    height: 50vh;
+    width: 30vw;
+}
+
+.ganador1{
+    font-weight: bolder;
+    text-align: center;
+    align-self: center;
+    width: 250px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius:50%;
+    border-radius: 50%;
+    padding-top: 40px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 55%, rgba(252,176,69,1) 100%);
+}
+.ganador2{
+    font-weight: bolder;
+    text-align: center;
+    align-self: center;
+    width: 250px;
+    height: 100px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius:50%;
+    border-radius: 50%;
+    padding-top: 40px;
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 55%, rgba(252,176,69,1) 100%);
 }
